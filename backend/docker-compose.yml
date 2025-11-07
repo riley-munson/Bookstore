@@ -1,0 +1,82 @@
+version: '3.9'
+
+services:
+    #catalog microservice
+    catalogservice:
+        build:
+            context: './src/CatalogService'
+        container_name: 'catalogservice'
+        ports:
+            - "5001:8080"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ConnectionStrings_DefaultConnection=${DEFAULT_CONN_STR}
+        depends_on:
+            - sqldata_catalog
+
+    #order microservice
+    orderservice:
+        build:
+            context: './src/OrderService'
+        container_name: 'orderservice'
+        ports:
+            - "5002:8080"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ConnectionStrings_DefaultConnection=${DEFAULT_CONN_STR}
+        depends_on:
+            - sqldata_corder
+ 
+    #user microservice
+    userservice:
+        build:
+            context: './src/UserService'
+        container_name: 'userservice'
+        ports:
+            - "5003:8080"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ConnectionStrings_DefaultConnection=${DEFAULT_CONN_STR}
+        depends_on:
+            - sqldata_user
+
+    # SQL Server for Catalog
+    sqldata_catalog:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: sqldata_catalog
+        environment:
+            SA_PASSWORD: ${SA_PASSWORD}
+            ACCEPT_EULA: "Y"
+        ports:
+            - "14331:1433"
+        volumes:
+            - sqldata_catalog:/var/opt/mssql
+
+    # SQL Server for Orders
+    sqldata_order:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: sqldata_order
+        environment:
+            SA_PASSWORD: ${SA_PASSWORD}
+            ACCEPT_EULA: "Y"
+        ports:
+            - "14332:1433"
+        volumes:
+            - sqldata_catalog:/var/opt/mssql
+
+    # SQL Server for Users
+    sqldata_user:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: sqldata_user
+        environment:
+            SA_PASSWORD: ${SA_PASSWORD}
+            ACCEPT_EULA: "Y"
+        ports:
+            - "14334:1433"
+        volumes:
+            - sqldata_catalog:/var/opt/mssql
+
+volumes:
+    sqldata_catalog:
+    sqldata_order:
+    sqldata_user:
