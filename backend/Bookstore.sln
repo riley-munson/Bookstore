@@ -5,12 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{37AB89B1-8CA0-42C2-83D7-69B65D7C9546}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DD6F5511-E88A-47E3-BA19-B245D877021F}"
-	ProjectSection(SolutionItems) = preProject
-		.env = .env
-		docker-compose.yml = docker-compose.yml
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatalogService", "CatalogService", "{6E3759B9-32AF-42EB-8897-F179E332E22E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderService", "OrderService", "{064A6ADC-660F-4146-B21E-DEC181C5992D}"
@@ -19,27 +13,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserService", "UserService"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\CatalogService\Api\Api.csproj", "{859A7774-B8B5-4003-8AD9-74F5C285BFCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\CatalogService\Application\Application.csproj", "{EB11006F-495B-4524-8088-E0A70FA8029B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\CatalogService\Application\Application.csproj", "{EB11006F-495B-4524-8088-E0A70FA8029B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\CatalogService\Domain\Domain.csproj", "{50713C92-E1BC-4A06-9CE0-E4322ADCD058}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\CatalogService\Domain\Domain.csproj", "{50713C92-E1BC-4A06-9CE0-E4322ADCD058}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\CatalogService\Infrastructure\Infrastructure.csproj", "{254E0946-3A89-4BA6-A0B5-C33962C81426}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\CatalogService\Infrastructure\Infrastructure.csproj", "{254E0946-3A89-4BA6-A0B5-C33962C81426}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\OrderService\Application\Application.csproj", "{08409B04-DFF4-49BA-86B4-8EABB1C11AB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\OrderService\Application\Application.csproj", "{08409B04-DFF4-49BA-86B4-8EABB1C11AB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\OrderService\Domain\Domain.csproj", "{2DBF3453-9F33-4620-A2F3-932EEEDFEC56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\OrderService\Domain\Domain.csproj", "{2DBF3453-9F33-4620-A2F3-932EEEDFEC56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\OrderService\Infrastructure\Infrastructure.csproj", "{11FC9BE6-D3A6-4D7B-B4F8-0CF155AEC6D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\OrderService\Infrastructure\Infrastructure.csproj", "{11FC9BE6-D3A6-4D7B-B4F8-0CF155AEC6D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "src\OrderService\Api\Api.csproj", "{EA2D0EE2-1449-44CA-A0A7-D82DB69B24C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\OrderService\Api\Api.csproj", "{EA2D0EE2-1449-44CA-A0A7-D82DB69B24C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "src\UserService\Api\Api.csproj", "{4C0E1498-7857-4826-A494-E571813A05A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\UserService\Api\Api.csproj", "{4C0E1498-7857-4826-A494-E571813A05A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\UserService\Application\Application.csproj", "{C48223E3-C1B8-45EB-A629-3DB38403B3ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\UserService\Application\Application.csproj", "{C48223E3-C1B8-45EB-A629-3DB38403B3ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\UserService\Domain\Domain.csproj", "{7AFBDCAC-0033-4B73-A3DF-8D09F4D6B3C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\UserService\Domain\Domain.csproj", "{7AFBDCAC-0033-4B73-A3DF-8D09F4D6B3C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\UserService\Infrastructure\Infrastructure.csproj", "{46389BA0-BFFB-4F42-A465-4E45FEB1D294}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\UserService\Infrastructure\Infrastructure.csproj", "{46389BA0-BFFB-4F42-A465-4E45FEB1D294}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
